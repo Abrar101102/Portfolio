@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-terminal-green: #00ff00;
+  --color-terminal-dark: #0a0a0a;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  
+  .font-mono {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .terminal-border {
+    @apply border border-terminal-green/30;
+  }
+  
+  .terminal-glow {
+    @apply shadow-[0_0_15px_rgba(0,255,0,0.1)];
+  }
+  
+  .terminal-text-glow {
+    @apply text-terminal-green drop-shadow-[0_0_5px_rgba(0,255,0,0.5)];
+  }
+}
